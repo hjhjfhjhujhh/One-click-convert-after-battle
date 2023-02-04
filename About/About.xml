@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>一键转化战利品</name>
+  <author>Alfie Brook</author>
+  <packageId>Alfie.oneclickconvert_copy</packageId>
+  <!-- <forceLoadBefore>
+    <li>Ludeon.RimWorld.Ideology</li>
+  </forceLoadBefore> -->
+  <supportedVersions>
+  	<!-- without test -->
+    <!-- <li>1.3</li> -->
+    <li>1.4</li>
+  </supportedVersions>
+  <description>
+&lt;size=20&gt;One-click convert after battle&lt;/size&gt;
+
+对战斗后满地的掉落物头疼吗？
+
+不满于直接清除尸体，想要获得补偿？
+
+本mod在添加了一键转化战利品的选项，你可以将地图上的尸体和掉落物快速转化为白银
+
+&lt;size=16&gt;警告：目前未实装转化掉落物功能，价值设置也比较随意。后面事比较多，找时间再填坑。欢迎大佬补完程序。
+&lt;/size&gt;
+
+Tired of handling dropped items all over the map after a battle?
+
+Willing to get compensation other than just destory the corpses?	
+
+This mod adds a new option to the comm console,which allows you to turn corpses and their drops on the map into silver with one single click.
+
+Support Chinese and English version.
+
+&lt;size=16&gt;Warning: It's unfinished.I'll make it done several days later.Complete the project welcomed.&lt;/size&gt;
+
+
+	</description>
+</ModMetaData>

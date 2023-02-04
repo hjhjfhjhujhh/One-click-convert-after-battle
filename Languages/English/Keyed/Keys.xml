@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <SaleOfGoodsYes>One-click convert after battle(Cost: {0}goodwill)</SaleOfGoodsYes>
+  <SaleOfGoodsNo>One-click convert after battle</SaleOfGoodsNo>
+  <MustBeAlly>Must Be Ally</MustBeAlly>
+  <SellBooty>One-click convert</SellBooty>
+  <Silver>Sell and get silver</Silver>
+  <DropPod>Drop Pod:{0}</DropPod>
+  <Sell>The goods you received form quick convert</Sell>
+  <NoCorpses>There are no corpses to be disposed of</NoCorpses>
+  <GoBack>Go Back</GoBack>
+
+
+  <SaleOfGoods_Setting>One-click convert after battle</SaleOfGoods_Setting>
+  <!-- <Default_Setting>Restore default settings</Default_Setting> -->
+  <GoodWill>The sale of booty requires goodwill</GoodWill>
+  <Cost_GoodWill>How much goodwill to cost</Cost_GoodWill>
+  <GoodWillInt>Goodwill is required for each deal(Default:15)</GoodWillInt>
+  <What_to_convert>What to convert</What_to_convert>
+  <Corpses_With_Clothes>Corpses with their clothes</Corpses_With_Clothes>
+  <Deadint>Set the value of each deadbody(Default:100)</Deadint>
+  <With_Drops>Contain Drops(Warning：It will destory all things around,please pick up what you want first)</With_Drops>
+  <Searching_area>Search Area(Default:1) (Recommanded below 5)</Searching_area>
+  
+</LanguageData>

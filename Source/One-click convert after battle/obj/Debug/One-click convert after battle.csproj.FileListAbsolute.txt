@@ -1,0 +1,7 @@
+D:\Game\Steam\steamapps\common\RimWorld\Mods\One-click convert after battle\Source\One-click convert after battle\obj\Debug\One-click convert after battle.csproj.AssemblyReference.cache
+D:\Game\Steam\steamapps\common\RimWorld\Mods\One-click convert after battle\Source\One-click convert after battle\obj\Debug\One-click convert after battle.csproj.CoreCompileInputs.cache
+D:\Game\Steam\steamapps\common\RimWorld\Mods\One-click convert after battle\Assemblies\One-click convert after battle.pdb
+D:\Game\Steam\steamapps\common\RimWorld\Mods\One-click convert after battle\Source\One-click convert after battle\obj\Debug\One-click convert after battle.pdb
+D:\Game\Steam\steamapps\common\RimWorld\Mods\One-click convert after battle\Source\One-click convert after battle\obj\Debug\One-click convert after battle.csproj.CopyComplete
+D:\Game\Steam\steamapps\common\RimWorld\Mods\One-click convert after battle\Assemblies\One-click convert after battle.dll
+D:\Game\Steam\steamapps\common\RimWorld\Mods\One-click convert after battle\Source\One-click convert after battle\obj\Debug\One-click convert after battle.dll

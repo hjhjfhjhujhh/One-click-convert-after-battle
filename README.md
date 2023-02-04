@@ -16,6 +16,6 @@ Willing to get compensation other than just destory the corpses?
 
 This mod adds a new option to the comm console,which allows you to turn corpses and their drops on the map into silver with one single click.
 
-Support Chinese and English version.
+Support ChineseSimplified and English version.
 
 Warning: It's unfinished.I'll make it done several days later.Complete the project welcomed.

@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "HiP54x3rs+tLpjKJoxf5zWMhcATMajRHwn9bAuoLjj822rOYwuicCzHp2TbJXhWnOfSV0ha3Y6mol+0xLZXhng==",
+  "success": true,
+  "projectFilePath": "D:\\Game\\Steam\\steamapps\\common\\RimWorld\\ModsProject\\One-click-convert-after-battle\\Source\\Source\\One click convert after battle.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\11634\\.nuget\\packages\\krafs.publicizer\\1.0.3\\krafs.publicizer.1.0.3.nupkg.sha512",
+    "C:\\Users\\11634\\.nuget\\packages\\krafs.rimworld.ref\\1.4.3641\\krafs.rimworld.ref.1.4.3641.nupkg.sha512",
+    "C:\\Users\\11634\\.nuget\\packages\\lib.harmony\\2.2.2\\lib.harmony.2.2.2.nupkg.sha512",
+    "C:\\Users\\11634\\.nuget\\packages\\rimworld.multiplayerapi\\0.4.0\\rimworld.multiplayerapi.0.4.0.nupkg.sha512",
+    "C:\\Users\\11634\\.nuget\\packages\\unlimitedhugs.rimworld.hugslib\\10.0.1\\unlimitedhugs.rimworld.hugslib.10.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

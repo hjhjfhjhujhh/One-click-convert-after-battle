@@ -12,7 +12,7 @@ Mod of RimWorld
 
 Tired of handling dropped items all over the map after a battle?
 
-Willing to get compensation other than just destory the corpses?	
+Willing to get compensation other than just destroy the corpses?	
 
 This mod adds a new option to the comm console,which allows you to turn corpses and their drops on the map into silver with one single click.
 

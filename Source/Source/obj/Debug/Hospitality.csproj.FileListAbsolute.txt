@@ -1,0 +1,5 @@
+D:\Game\Steam\steamapps\common\RimWorld\ModsProject\__LocalCopy_Hospitality_-6-3\Source\Source\obj\Debug\Hospitality.csproj.AssemblyReference.cache
+D:\Game\Steam\steamapps\common\RimWorld\ModsProject\__LocalCopy_Hospitality_-6-3\Source\Source\obj\Debug\Hospitality.GeneratedMSBuildEditorConfig.editorconfig
+D:\Game\Steam\steamapps\common\RimWorld\ModsProject\__LocalCopy_Hospitality_-6-3\Source\Source\obj\Debug\Hospitality.csproj.CoreCompileInputs.cache
+D:\Game\Steam\steamapps\common\RimWorld\ModsProject\__LocalCopy_Hospitality_-6-3\1.4\Assemblies\One click convert after battle.dll
+D:\Game\Steam\steamapps\common\RimWorld\ModsProject\__LocalCopy_Hospitality_-6-3\Source\Source\obj\Debug\One click convert after battle.dll

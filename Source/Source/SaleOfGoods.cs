@@ -18,8 +18,13 @@ namespace SaleOfGoods
         static SaleOfGoods()
         {
             Harmony harmony = new Harmony("SaleOfGoods");
+            harmony.PatchAll(Assembly.GetExecutingAssembly());
             harmony.Patch(typeof(FactionDialogMaker).GetMethod("FactionDialogFor"), null, new HarmonyMethod(typeof(SaleOfGoods), "FactionDialogForPostFix", null), null, null);
         }
+        /*public void Save()
+        {
+            LoadedModManager.GetMod<SaleOfGoods>().GetSettings<Settings>().Write();
+        }*/
         public static void FactionDialogForPostFix(ref DiaNode __result, Pawn negotiator, Faction faction)
         {
             bool flag = FactionUtility.AllyOrNeutralTo(faction, Faction.OfPlayer);

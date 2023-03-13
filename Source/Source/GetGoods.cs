@@ -22,12 +22,8 @@ public static class GetGoods
     {
         Map currentMap = Find.CurrentMap;
         bool flag = currentMap == null;
-        int result;
-        if (flag)
-        {
-            result = 0;
-        }
-        else
+        int result = 0;
+        if(!flag)
         {
             List<Thing> list = currentMap.listerThings.ThingsInGroup((ThingRequestGroup)8);
             int count = list.Count;
@@ -46,7 +42,12 @@ public static class GetGoods
                     corpse.Discard(false);
                 }
             }
-            result = count * SaleOfGoodsSettings.deadint;
+            if(SaleOfGoodsSettings.deadBody)
+            {
+                result = count * SaleOfGoodsSettings.deadint;
+                if(SaleOfGoodsSettings.drops)
+                    result += count *  SaleOfGoodsSettings.dropsint;
+            }
         }
         return result;
     }

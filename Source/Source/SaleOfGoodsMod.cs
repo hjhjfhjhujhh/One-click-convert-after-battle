@@ -1,4 +1,7 @@
-﻿using System;
+﻿using HarmonyLib;
+using SaleOfGoods;
+using System;
+using System.Reflection;
 using System.Security.Cryptography;
 using UnityEngine;
 using Verse;
@@ -14,6 +17,10 @@ namespace SaleOfGoods
             SaleOfGoodsMod.Settings = base.GetSettings<SaleOfGoodsSettings>();
             SaleOfGoodsMod.Instance = this;
         }
+        /*public void Save()
+        {
+            LoadedModManager.GetMod<SaleOfGoods>().GetSettings<Settings>().Write();
+        }*/
         public override string SettingsCategory()
         {
             return Translator.Translate("SaleOfGoods_Setting");
@@ -31,8 +38,9 @@ namespace SaleOfGoods
             listing_Standard.Label(Translator.Translate("What_to_convert"), -1f, null);
             listing_Standard.CheckboxLabeled(Translator.Translate("Corpses_With_Clothes"), ref SaleOfGoodsSettings.deadBody, null, 0f, 1f);
             this.TextFieldNumericLabeled<int>(listing_Standard, Translator.Translate("Deadint"), ref SaleOfGoodsSettings.deadint, 0f, 1000000f);
-            /*listing_Standard.CheckboxLabeled(Translator.Translate("With_Drops"), ref SaleOfGoodsSettings.drops, null, 0f, 1f);
-            this.TextFieldNumericLabeled<int>(listing_Standard, Translator.Translate("Dropsint"), ref SaleOfGoodsSettings.dropsint, 0f, 1000f);*/
+            listing_Standard.CheckboxLabeled(Translator.Translate("With_Drops"), ref SaleOfGoodsSettings.drops, null, 0f, 1f);
+            this.TextFieldNumericLabeled<int>(listing_Standard, Translator.Translate("Dropsint"), ref SaleOfGoodsSettings.dropsint, 0f, 1000f);
+
             listing_Standard.End();
         }
         private void TextFieldNumericLabeled<T>(Listing_Standard ls, string label, ref T val, float min, float max) where T : struct

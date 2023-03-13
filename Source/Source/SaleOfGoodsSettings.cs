@@ -14,8 +14,10 @@ namespace SaleOfGoods
             Scribe_Values.Look<int>(ref goodWillInt, "GoodWillInt", 15, true);
             Scribe_Values.Look<bool>(ref deadBody, "deadBody", true, false);
             Scribe_Values.Look<int>(ref deadint, "deadint", 100, true);
-            Scribe_Values.Look<bool>(ref drops, "drops", false, false);
+            Scribe_Values.Look<bool>(ref drops, "drops", true, false);
             Scribe_Values.Look<int>(ref dropsint, "dropsint", 50, true);
+            Scribe_Values.Look<bool>(ref cleangoodWill, "CleanGoodWill", true, false);
+            Scribe_Values.Look<int>(ref cleangoodWillInt, "CleanGoodWillInt", 15, true);
 
             /*Scribe_Values.Look<bool>(ref player_downed_drop_equipment, "drops", false, false);
             Scribe_Values.Look<bool>(ref player_downed_drop_inventory, "drops", false, false);
@@ -32,8 +34,11 @@ namespace SaleOfGoods
         public static int goodWillInt = 15;
         public static bool deadBody = true;
         public static int deadint = 100;
-        public static bool drops = false;
+        public static bool drops = true;
         public static int dropsint = 50;
+        public static bool cleangoodWill = true;
+        public static int cleangoodWillInt = 15;
+
         /*public static bool player_downed_drop_equipment = false;
         public static bool player_downed_drop_inventory = false;
         public static bool player_killed_drop_equipment = false;

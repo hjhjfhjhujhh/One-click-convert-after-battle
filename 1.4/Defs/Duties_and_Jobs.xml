@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <DutyDef>
-    <defName>NonUnoPinata_StripDuelEquipment</defName>
+    <defName>SaleOfGoods_StripDuelEquipment</defName>
     <thinkNode Class="ThinkNode_Priority">
       <subNodes>
 
-        <li Class="NonUnoPinata.JobGiver_StripDuelEquipment" />
+        <li Class="SaleOfGoods.JobGiver_StripDuelEquipment" />
         <li Class="JobGiver_Idle">
           <ticks>60</ticks>
         </li>
@@ -15,8 +15,8 @@
   </DutyDef>
   
   <JobDef>
-    <defName>NonUnoPinata_StripEquipment</defName>
-    <driverClass>NonUnoPinata.JobDriver_StripEquipment</driverClass>
+    <defName>SaleOfGoods_StripEquipment</defName>
+    <driverClass>SaleOfGoods.JobDriver_StripEquipment</driverClass>
     <reportString>removing equipment.</reportString>
   </JobDef>
   

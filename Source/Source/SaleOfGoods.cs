@@ -35,9 +35,8 @@ namespace SaleOfGoods
         }
         private static DiaOption SellingOption(Faction faction, Pawn negotiator, Map map, DiaNode original)
         {
-            bool goodWill = SaleOfGoodsSettings.goodWill;
             string text;
-            if (goodWill)
+            if (SaleOfGoodsSettings.goodWill)
             {
                 text = TranslatorFormattedStringExtensions.Translate("SaleOfGoodsYes", SaleOfGoodsSettings.goodWillInt);
             }
@@ -55,39 +54,84 @@ namespace SaleOfGoods
             }
             else
             {
+                DiaNode diaNode = new DiaNode(Translator.Translate("SellBooty"));
+                ThingDef mine;
+                GetGoods.GetDrops(out mine);
+
+                DiaOption diaOption2 = new DiaOption(Translator.Translate("Silver"));
+                diaOption2.action = delegate ()
+                {
+                    Thing thing = ThingMaker.MakeThing(mine, null);
+                    int num = GetGoods.RemoveCorpses();
+                    thing.stackCount = num;
+                    TradeUtility.SpawnDropPod(DropCellFinder.TradeDropSpot(map), map, thing);
+                    Find.LetterStack.ReceiveLetter(TranslatorFormattedStringExtensions.Translate("DropPod", thing), TranslatorFormattedStringExtensions.Translate("Sell"), LetterDefOf.PositiveEvent, thing, null, null, null, null);
+                    if (SaleOfGoodsSettings.goodWill)
+                    {
+                        Faction.OfPlayer.TryAffectGoodwillWith(faction, 0 - SaleOfGoodsSettings.goodWillInt, false, true, HistoryEventDefOf.RequestedTrader, null);
+                    }
+                };
+                diaOption2.linkLateBind = FactionDialogMaker.ResetToRoot(faction, negotiator);
+                diaNode.options.Add(diaOption2);
                 if (GetGoods.GetCorpses() == 0)
                 {
-                    diaOption.Disable(Translator.Translate("NoCorpses"));
-                    result = diaOption;
+                    diaOption2.Disable(Translator.Translate("NoCorpses"));
+                    result = diaOption2;
                 }
-                else
+
+                DiaOption diaOption3 = new DiaOption(Translator.Translate("RemoveSnow_Home"));
+                diaOption3.action = delegate ()
                 {
-                    DiaNode diaNode = new DiaNode(Translator.Translate("SellBooty"));
-                    ThingDef mine;
-                    GetGoods.GetDrops(out mine);
-                    DiaOption diaOption2 = new DiaOption(Translator.Translate("Silver"));
-                    diaOption2.action = delegate ()
+                    Cleanser.RemoveSnow(map, true);
+                    if (SaleOfGoodsSettings.cleangoodWill)
                     {
-                        Thing thing = ThingMaker.MakeThing(mine, null);
-                        int num = GetGoods.RemoveCorpses();
-                        thing.stackCount = num;
-                        TradeUtility.SpawnDropPod(DropCellFinder.TradeDropSpot(map), map, thing);
-                        Find.LetterStack.ReceiveLetter(TranslatorFormattedStringExtensions.Translate("DropPod", thing), TranslatorFormattedStringExtensions.Translate("Sell"), LetterDefOf.PositiveEvent, thing, null, null, null, null);
-                        bool goodWill2 = SaleOfGoodsSettings.goodWill;
-                        if (goodWill2)
-                        {
-                            Faction.OfPlayer.TryAffectGoodwillWith(faction, 0 - SaleOfGoodsSettings.goodWillInt, false, true, HistoryEventDefOf.RequestedTrader, null);
-                        }
-                    };
-                    diaOption2.linkLateBind = FactionDialogMaker.ResetToRoot(faction, negotiator);
-                    diaNode.options.Add(diaOption2);
-                    diaNode.options.Add(new DiaOption(Translator.Translate("GoBack"))
+                        Faction.OfPlayer.TryAffectGoodwillWith(faction, 0 - SaleOfGoodsSettings.cleangoodWillInt, false, true, HistoryEventDefOf.RequestedTrader, null);
+                    }
+                };
+                diaOption3.linkLateBind = FactionDialogMaker.ResetToRoot(faction, negotiator);
+                diaNode.options.Add(diaOption3);
+                DiaOption diaOption4 = new DiaOption(Translator.Translate("RemoveSnow_Whole"));
+                diaOption4.action = delegate ()
+                {
+                    Cleanser.RemoveSnow(map, false);
+                    if (SaleOfGoodsSettings.cleangoodWill)
                     {
-                        linkLateBind = FactionDialogMaker.ResetToRoot(faction, negotiator)
-                    });
-                    diaOption.link = diaNode;
-                    result = diaOption;
-                }
+                        Faction.OfPlayer.TryAffectGoodwillWith(faction, 0 - 2 * SaleOfGoodsSettings.cleangoodWillInt, false, true, HistoryEventDefOf.RequestedTrader, null);
+                    }
+                };
+                diaOption4.linkLateBind = FactionDialogMaker.ResetToRoot(faction, negotiator);
+                diaNode.options.Add(diaOption4);
+
+                DiaOption diaOption5 = new DiaOption(Translator.Translate("RemoveFilth_Home"));
+                diaOption5.action = delegate ()
+                {
+                    Cleanser.RemoveFilth(map, true);
+                    if (SaleOfGoodsSettings.cleangoodWill)
+                    {
+                        Faction.OfPlayer.TryAffectGoodwillWith(faction, 0 - SaleOfGoodsSettings.cleangoodWillInt, false, true, HistoryEventDefOf.RequestedTrader, null);
+                    }
+                };
+                diaOption5.linkLateBind = FactionDialogMaker.ResetToRoot(faction, negotiator);
+                diaNode.options.Add(diaOption5);
+
+                DiaOption diaOption6 = new DiaOption(Translator.Translate("RemoveFilth_Whole"));
+                diaOption6.action = delegate ()
+                {
+                    Cleanser.RemoveFilth(map, false);
+                    if (SaleOfGoodsSettings.cleangoodWill)
+                    {
+                        Faction.OfPlayer.TryAffectGoodwillWith(faction, 0 - 2 * SaleOfGoodsSettings.cleangoodWillInt, false, true, HistoryEventDefOf.RequestedTrader, null);
+                    }
+                };
+                diaOption6.linkLateBind = FactionDialogMaker.ResetToRoot(faction, negotiator);
+                diaNode.options.Add(diaOption6);
+
+                diaNode.options.Add(new DiaOption(Translator.Translate("GoBack"))
+                {
+                    linkLateBind = FactionDialogMaker.ResetToRoot(faction, negotiator)
+                });
+                diaOption.link = diaNode;
+                result = diaOption;
             }
             return result;
         }

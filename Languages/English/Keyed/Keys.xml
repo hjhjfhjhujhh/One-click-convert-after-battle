@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
 
+  <!-- Please refer to this rather than the labels when translating -->
+
   <SaleOfGoodsYes>One-click convert after battle(Cost: {0}goodwill)</SaleOfGoodsYes>
   <SaleOfGoodsNo>One-click convert after battle</SaleOfGoodsNo>
   <MustBeAlly>Must Be Ally</MustBeAlly>
@@ -9,6 +11,10 @@
   <DropPod>Drop Pod:{0}</DropPod>
   <Sell>The goods you received form quick convert</Sell>
   <NoCorpses>There are no corpses to be disposed of</NoCorpses>
+  <RemoveSnow_Home>RemoveSnow(HomeArea)</RemoveSnow_Home>
+  <RemoveSnow_Whole>RemoveSnow(WholeMap)</RemoveSnow_Whole>
+  <RemoveFilth_Home>RemoveFilth(HomeArea)</RemoveFilth_Home>
+  <RemoveFilth_Whole>RemoveFilth(WholeMap)</RemoveFilth_Whole>
   <GoBack>Go Back</GoBack>
 
 
@@ -16,11 +22,18 @@
   <!-- <Default_Setting>Restore default settings</Default_Setting> -->
   <GoodWill>The sale of booty requires goodwill</GoodWill>
   <Cost_GoodWill>How much goodwill to cost</Cost_GoodWill>
-  <GoodWillInt>Goodwill is required for each deal(Default:15)</GoodWillInt>
+  <GoodWillInt>Goodwill required for each deal(Default:15)</GoodWillInt>
   <What_to_convert>What to convert</What_to_convert>
   <Corpses_With_Clothes>Corpses with their clothes</Corpses_With_Clothes>
   <Deadint>Set the value of each deadbody(Default:100)</Deadint>
-  <With_Drops>Contain Drops(Warning：It will destory all things around,please pick up what you want first)</With_Drops>
-  <Searching_area>Search Area(Default:1) (Recommanded below 5)</Searching_area>
+  <With_Drops>Contain Drops</With_Drops>
+  <Dropsint>Set the value of the belongings(Default:50)</Dropsint>
+  <Additional_Cleanser>Additional: Clean Snow and Filth</Additional_Cleanser>
+  <Clean_Cost_GoodWill>How much goodwill to cost</Clean_Cost_GoodWill>
+  <Clean_GoodWillInt>Goodwill required for each cleaning(Default:15)</Clean_GoodWillInt>
+
+  <!-- UI Icon -->
+  <StripThing>Strip</StripThing>
+  <StripThingCancel>Cancel Strip</StripThingCancel>
   
 </LanguageData>

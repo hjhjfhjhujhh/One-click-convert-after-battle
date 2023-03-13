@@ -29,8 +29,6 @@ namespace SaleOfGoods
         {
             Listing_Standard listing_Standard = new Listing_Standard();
             listing_Standard.Begin(GenUI.ContractedBy(inRect, 60f));
-            //Rect rect2;
-            //可注释
             listing_Standard.Label(Translator.Translate("GoodWill"), -1f, null);
             listing_Standard.CheckboxLabeled(Translator.Translate("Cost_GoodWill"), ref SaleOfGoodsSettings.goodWill, null, 0f, 1f);
             //测试是否超限
@@ -40,6 +38,9 @@ namespace SaleOfGoods
             this.TextFieldNumericLabeled<int>(listing_Standard, Translator.Translate("Deadint"), ref SaleOfGoodsSettings.deadint, 0f, 1000000f);
             listing_Standard.CheckboxLabeled(Translator.Translate("With_Drops"), ref SaleOfGoodsSettings.drops, null, 0f, 1f);
             this.TextFieldNumericLabeled<int>(listing_Standard, Translator.Translate("Dropsint"), ref SaleOfGoodsSettings.dropsint, 0f, 1000f);
+            listing_Standard.Label(Translator.Translate("Additional_Cleanser"), -1f, null);
+            listing_Standard.CheckboxLabeled(Translator.Translate("Clean_Cost_GoodWill"), ref SaleOfGoodsSettings.cleangoodWill, null, 0f, 1f);
+            this.TextFieldNumericLabeled<int>(listing_Standard, Translator.Translate("Clean_GoodWillInt"), ref SaleOfGoodsSettings.cleangoodWillInt, 0f, 200f);
 
             listing_Standard.End();
         }

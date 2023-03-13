@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
 
-  <SaleOfGoodsYes>一键转化战利品 (花费: {0}友好度)</SaleOfGoodsYes>
+  <!-- Please refer to this rather than the labels when translating -->
+
+  <SaleOfGoodsYes>一键转化战利品 (花费：{0}友好度）</SaleOfGoodsYes>
   <SaleOfGoodsNo>一键转化战利品</SaleOfGoodsNo>
   <MustBeAlly>必须为盟友</MustBeAlly>
   <SellBooty>一键转化</SellBooty>
@@ -9,6 +11,10 @@
   <DropPod>空投舱:{0}</DropPod>
   <Sell>一键转化获得的物资</Sell>
   <NoCorpses>没有待处理的尸体</NoCorpses>
+  <RemoveSnow_Home>清理积雪（居住区）</RemoveSnow_Home>
+  <RemoveSnow_Whole>清理积雪（整张地图）</RemoveSnow_Whole>
+  <RemoveFilth_Home>清理污渍（居住区）</RemoveFilth_Home>
+  <RemoveFilth_Whole>清理污渍（整张地图）</RemoveFilth_Whole>
   <GoBack>返回</GoBack>
 
 
@@ -16,11 +22,18 @@
   <!-- <Default_Setting>恢复默认设置</Default_Setting> -->
   <GoodWill>设置转化战利品消耗友好度</GoodWill>
   <Cost_GoodWill>转化战利品消耗友好度</Cost_GoodWill>
-  <GoodWillInt>每次转化消耗友好度(默认值:15)</GoodWillInt>
+  <GoodWillInt>每次转化消耗友好度（默认值：15）</GoodWillInt>
   <What_to_convert>设置转化的物品</What_to_convert>
   <Corpses_With_Clothes>尸体和死人衣物</Corpses_With_Clothes>
-  <Deadint>每具尸体的价值(默认值:100)</Deadint>
-  <With_Drops>包括掉落物(警告：会消除周围所有物品，请提前拾取所需)</With_Drops>
-  <Searching_area>掉落物搜索范围(默认值:1)(建议低于5)</Searching_area>
+  <Deadint>每具尸体的价值（默认值：100）</Deadint>
+  <With_Drops>包括掉落物</With_Drops>
+  <Dropsint>每人携带物品的价值（默认值：50）</Dropsint>
+  <Additional_Cleanser>附加功能：清理积雪和污渍</Additional_Cleanser>
+  <Clean_Cost_GoodWill>清理消耗友好度</Clean_Cost_GoodWill>
+  <Clean_GoodWillInt>清理消耗友好度（默认值：15）</Clean_GoodWillInt>
+
+  <!-- UI Icon -->
+  <StripThing>剥除</StripThing>
+  <StripThingCancel>取消剥除</StripThingCancel>
   
 </LanguageData>

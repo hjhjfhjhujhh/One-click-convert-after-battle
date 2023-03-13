@@ -11,11 +11,11 @@
 				<value>
 					<li>
 						<roleId>escorte1</roleId>
-						<dutyDef>NonUnoPinata_StripDuelEquipment</dutyDef>
+						<dutyDef>SaleOfGoods_StripDuelEquipment</dutyDef>
 					</li>
 					<li>
 						<roleId>escorte2</roleId>
-						<dutyDef>NonUnoPinata_StripDuelEquipment</dutyDef>
+						<dutyDef>SaleOfGoods_StripDuelEquipment</dutyDef>
 					</li>
 				</value>
 			</li>

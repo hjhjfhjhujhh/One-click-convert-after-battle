@@ -29,10 +29,10 @@ namespace SaleOfGoods
         {
             Listing_Standard listing_Standard = new Listing_Standard();
             listing_Standard.Begin(GenUI.ContractedBy(inRect, 60f));
-            listing_Standard.Label(Translator.Translate("GoodWill"), -1f, null);
-            listing_Standard.CheckboxLabeled(Translator.Translate("Cost_GoodWill"), ref SaleOfGoodsSettings.goodWill, null, 0f, 1f);
+            listing_Standard.Label(Translator.Translate("Convert_GoodWill"), -1f, null);
+            listing_Standard.CheckboxLabeled(Translator.Translate("Convert_Cost_GoodWill"), ref SaleOfGoodsSettings.goodWill, null, 0f, 1f);
             //测试是否超限
-            this.TextFieldNumericLabeled<int>(listing_Standard, Translator.Translate("GoodWillInt"), ref SaleOfGoodsSettings.goodWillInt, 0f, 200f);
+            this.TextFieldNumericLabeled<int>(listing_Standard, Translator.Translate("Convert_GoodWillInt"), ref SaleOfGoodsSettings.goodWillInt, 0f, 200f);
             listing_Standard.Label(Translator.Translate("What_to_convert"), -1f, null);
             listing_Standard.CheckboxLabeled(Translator.Translate("Corpses_With_Clothes"), ref SaleOfGoodsSettings.deadBody, null, 0f, 1f);
             this.TextFieldNumericLabeled<int>(listing_Standard, Translator.Translate("Deadint"), ref SaleOfGoodsSettings.deadint, 0f, 1000000f);

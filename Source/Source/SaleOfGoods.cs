@@ -35,37 +35,37 @@ namespace SaleOfGoods
         }
         private static DiaOption SellingOption(Faction faction, Pawn negotiator, Map map, DiaNode original)
         {
-            string text;
-            if (SaleOfGoodsSettings.goodWill)
-            {
-                text = TranslatorFormattedStringExtensions.Translate("SaleOfGoodsYes", SaleOfGoodsSettings.goodWillInt);
-            }
-            else
-            {
-                text = Translator.Translate("SaleOfGoodsNo");
-            }
-            DiaOption diaOption = new DiaOption(text);
+            DiaOption diaOption = new DiaOption(Translator.Translate("SaleOfGoods"));
             bool flag = ((int)faction.PlayerRelationKind != 2);
             DiaOption result;
             if (flag)
             {
-                diaOption.Disable(Translator.Translate("MustBeAlly"));
+                diaOption.Disable(Translator.Translate("Convert_MustBeAlly"));
                 result = diaOption;
             }
             else
             {
-                DiaNode diaNode = new DiaNode(Translator.Translate("SellBooty"));
+                DiaNode diaNode = new DiaNode(Translator.Translate("Convert_SellBooty"));
                 ThingDef mine;
                 GetGoods.GetDrops(out mine);
 
-                DiaOption diaOption2 = new DiaOption(Translator.Translate("Silver"));
+                string text;
+                if (SaleOfGoodsSettings.goodWill)
+                {
+                    text = TranslatorFormattedStringExtensions.Translate("Convert_Silver_Yes", SaleOfGoodsSettings.goodWillInt);
+                }
+                else
+                {
+                    text = Translator.Translate("Convert_Silver_No");
+                }
+                DiaOption diaOption2 = new DiaOption(text);
                 diaOption2.action = delegate ()
                 {
                     Thing thing = ThingMaker.MakeThing(mine, null);
                     int num = GetGoods.RemoveCorpses();
                     thing.stackCount = num;
                     TradeUtility.SpawnDropPod(DropCellFinder.TradeDropSpot(map), map, thing);
-                    Find.LetterStack.ReceiveLetter(TranslatorFormattedStringExtensions.Translate("DropPod", thing), TranslatorFormattedStringExtensions.Translate("Sell"), LetterDefOf.PositiveEvent, thing, null, null, null, null);
+                    Find.LetterStack.ReceiveLetter(TranslatorFormattedStringExtensions.Translate("Convert_DropPod", thing), TranslatorFormattedStringExtensions.Translate("Sell"), LetterDefOf.PositiveEvent, thing, null, null, null, null);
                     if (SaleOfGoodsSettings.goodWill)
                     {
                         Faction.OfPlayer.TryAffectGoodwillWith(faction, 0 - SaleOfGoodsSettings.goodWillInt, false, true, HistoryEventDefOf.RequestedTrader, null);
@@ -79,7 +79,7 @@ namespace SaleOfGoods
                     result = diaOption2;
                 }
 
-                DiaOption diaOption3 = new DiaOption(Translator.Translate("RemoveSnow_Home"));
+                DiaOption diaOption3 = new DiaOption(TranslatorFormattedStringExtensions.Translate("RemoveSnow_Home", SaleOfGoodsSettings.cleangoodWillInt));
                 diaOption3.action = delegate ()
                 {
                     Cleanser.RemoveSnow(map, true);
@@ -90,7 +90,7 @@ namespace SaleOfGoods
                 };
                 diaOption3.linkLateBind = FactionDialogMaker.ResetToRoot(faction, negotiator);
                 diaNode.options.Add(diaOption3);
-                DiaOption diaOption4 = new DiaOption(Translator.Translate("RemoveSnow_Whole"));
+                DiaOption diaOption4 = new DiaOption(TranslatorFormattedStringExtensions.Translate("RemoveSnow_Whole", 2 * SaleOfGoodsSettings.cleangoodWillInt));
                 diaOption4.action = delegate ()
                 {
                     Cleanser.RemoveSnow(map, false);
@@ -102,7 +102,7 @@ namespace SaleOfGoods
                 diaOption4.linkLateBind = FactionDialogMaker.ResetToRoot(faction, negotiator);
                 diaNode.options.Add(diaOption4);
 
-                DiaOption diaOption5 = new DiaOption(Translator.Translate("RemoveFilth_Home"));
+                DiaOption diaOption5 = new DiaOption(TranslatorFormattedStringExtensions.Translate("RemoveFilth_Home", SaleOfGoodsSettings.cleangoodWillInt));
                 diaOption5.action = delegate ()
                 {
                     Cleanser.RemoveFilth(map, true);
@@ -114,7 +114,7 @@ namespace SaleOfGoods
                 diaOption5.linkLateBind = FactionDialogMaker.ResetToRoot(faction, negotiator);
                 diaNode.options.Add(diaOption5);
 
-                DiaOption diaOption6 = new DiaOption(Translator.Translate("RemoveFilth_Whole"));
+                DiaOption diaOption6 = new DiaOption(TranslatorFormattedStringExtensions.Translate("RemoveFilth_Whole", 2 * SaleOfGoodsSettings.cleangoodWillInt));
                 diaOption6.action = delegate ()
                 {
                     Cleanser.RemoveFilth(map, false);

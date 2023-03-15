@@ -15,21 +15,36 @@ public static class GetGoods
         {
             List<Thing> list = currentMap.listerThings.ThingsInGroup((ThingRequestGroup)8); 
             count = list.Count;
+            for (int i = list.Count - 1; i > -1; i--)
+            {
+                Corpse corpse = (Corpse)list[i];
+                Pawn pawn = corpse.InnerPawn;
+                if (pawn.IsColonist || pawn.IsSlaveOfColony || pawn.IsPrisonerOfColony)
+                {
+                    count--;
+                    continue;
+                }
+            }
         }
         return count;
     }
     public static int RemoveCorpses()
     {
         Map currentMap = Find.CurrentMap;
-        bool flag = currentMap == null;
         int result = 0;
-        if(!flag)
+        if(currentMap != null)
         {
             List<Thing> list = currentMap.listerThings.ThingsInGroup((ThingRequestGroup)8);
             int count = list.Count;
             for (int i = list.Count - 1; i > -1; i--)
             {
                 Corpse corpse = (Corpse)list[i];
+                Pawn pawn = corpse.InnerPawn;
+                if (pawn.IsColonist || pawn.IsSlaveOfColony || pawn.IsPrisonerOfColony)
+                {
+                    count--;
+                    continue;
+                }
                 corpse.DeSpawn(0);
                 bool flag2 = !corpse.Destroyed;
                 if (flag2)

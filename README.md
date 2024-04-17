@@ -1,3 +1,7 @@
+2024.4.17
+自用修改，1.5可用
+
+原简介：
 Mod of RimWorld
 
 # One-click-convert-after-battle
